@@ -11,6 +11,7 @@ function updateDriverRows() {
   driverRows.innerHTML = ''; // Clear existing rows
 
   for (var i = 0; i < numberOfTrucks; i++) {
+    // Ensure each name attribute is uniquely identified by appending an index
     var row = `<tr>
       <td><input type="text" name="driverName${i}" required></td>
       <td><input type="text" name="wirNumber${i}" required></td>
