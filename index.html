@@ -11,13 +11,13 @@ function updateDriverRows() {
   driverRows.innerHTML = ''; // Clear existing rows
 
   for (var i = 0; i < numberOfTrucks; i++) {
-    // Ensure each name attribute is uniquely identified by appending an index
+    // Using consistent naming with array brackets for dynamic fields
     var row = `<tr>
-      <td><input type="text" name="driverName${i}" required></td>
-      <td><input type="text" name="wirNumber${i}" required></td>
-      <td><input type="text" name="tractorTrailerNumber${i}" required></td>
-      <td><input type="text" name="trailerUnitNumber${i}" required></td>
-      <td><input type="checkbox" name="leadDriver${i}" value="Yes"></td>
+      <td><input type="text" name="driverName[]" required></td>
+      <td><input type="text" name="wirNumber[]" required></td>
+      <td><input type="text" name="tractorTrailerNumber[]" required></td>
+      <td><input type="text" name="trailerUnitNumber[]" required></td>
+      <td><input type="checkbox" name="leadDriver[]" value="Yes"></td>
     </tr>`;
     driverRows.innerHTML += row;
   }
